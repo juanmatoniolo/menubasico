@@ -294,3 +294,24 @@ body {
         font-size: 1em;
     }
 }
+
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    text-align: center; /* Asegura que el texto también esté centrado */
+  }
+  
+  @media (min-width: 768px) { /* Asumiendo que estás usando Bootstrap y su punto de ruptura para md es 768px */
+    .footer-container {
+      flex-direction: row; /* Organiza los elementos en una fila para pantallas más grandes */
+      justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    }
+    .footer-container p,
+    .footer-container .nav {
+      flex: 1; /* Permite que los elementos crezcan y se encogen según sea necesario */
+    }
+  }
+  
