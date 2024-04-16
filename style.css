@@ -180,3 +180,117 @@ body {
         /* Tamaño ajustado para pantallas pequeñas */
     }
 }
+
+
+
+/*MODO OSCURO CARDS         */
+
+/* Modo Oscuro */
+.dark-mode {
+    background-color: #121212;
+    /* Fondo oscuro para el modo oscuro */
+    color: #f0f0f0;
+    /* Texto claro para contraste */
+}
+
+/* Imagen de Encabezado en Modo Oscuro */
+.dark-mode .encabezado-img {
+    filter: brightness(0.5);
+    /* Oscurecer la imagen para que combine con el fondo */
+}
+
+/* Contenedor Principal en Modo Oscuro */
+.dark-mode .contenedor {
+    text-align: center;
+    padding: 2em;
+}
+
+/* Sección de Categoría en Modo Oscuro */
+.dark-mode .section-category {
+    margin: 3em 0;
+    padding: 1em;
+    background-color: #1a1a1a;
+    /* Fondo más oscuro para las secciones */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    /* Sombra clara para resaltar */
+}
+
+/* Títulos de Categoría en Modo Oscuro */
+.dark-mode .titulo-category {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #e67e22;
+    /* Color cálido para los títulos */
+}
+
+/* Servicio en Modo Oscuro */
+.dark-mode .servicio {
+    border: 1px solid #333;
+    /* Borde más oscuro para definir cada servicio */
+    border-radius: 8px;
+    margin-bottom: 1em;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+    /* Sombra clara para resaltar */
+    background-color: #181818;
+    /* Fondo ligeramente más claro que el fondo general */
+}
+
+/* Productos y Precios en Modo Oscuro */
+.dark-mode .producto-precio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+/* Estilos de Producto en Modo Oscuro */
+.dark-mode .producto {
+    font-size: 1.5em;
+    color: #2ecc71;
+    /* Verde claro para resaltar los productos */
+}
+
+/* Estilos de Precio en Modo Oscuro */
+.dark-mode .precio {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #f0f0f0;
+    /* Texto claro para el precio */
+}
+
+/* Descripciones de Productos en Modo Oscuro */
+.dark-mode .descripcion {
+    text-align: start;
+    font-size: 1em;
+    color: #bdc3c7;
+    /* Gris claro para las descripciones */
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Interruptor de Modo Oscuro */
+.dark-mode .toggle-switch {
+    background-color: #333;
+    /* Fondo más oscuro para el interruptor */
+}
+
+.dark-mode .switch {
+    background-color: #f0f0f0;
+    /* Botón claro para el interruptor */
+}
+
+/* Responsive en Modo Oscuro */
+@media (max-width: 768px) {
+    .dark-mode .titulo-category {
+        font-size: 1.5em;
+    }
+
+    .dark-mode .producto {
+        font-size: 1.2em;
+    }
+
+    .dark-mode .precio {
+        font-size: 1em;
+    }
+}
