@@ -1,19 +1,15 @@
 function toggleDarkMode() {
 	var body = document.body;
-	var icono = document.getElementById("modo-icono");
+	var iconoModo = document.getElementById("icono-modo");
 
 	body.classList.toggle("dark-mode");
 
-	// Cambiar el icono según el modo
 	if (body.classList.contains("dark-mode")) {
-		// Modo claro activado
-		icono.classList.remove("bi-moon");
-		icono.classList.add("bi-sun");
-		icono.innerHTML = "Cambiar a ☀";
+		iconoModo.innerHTML = "🌑 "; // Cambia a icono de luna
+		iconoModo.title = "Cambiar a modo día";
 	} else {
-		// Modo oscuro activado
-		icono.classList.remove("bi-sun");
-		icono.classList.add("bi-moon");
-		icono.innerHTML = "CAmbiar a 🌑";
+		iconoModo.innerHTML = "☀"; // Cambia a icono de sol
+		iconoModo.title = "Cambiar a modo noche";
 	}
 }
+

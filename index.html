@@ -16,6 +16,10 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Lato|Open+Sans&display=swap" rel="stylesheet">
   <!--  JS  -->
   <script src="./index.js"></script>
   <title>Menu</title>
@@ -25,31 +29,48 @@
   <header class="encabezado">
     <img class="encabezado-img" src="./img/OIG4.jpg" alt="">
   </header>
-  <div class="pos-f-t ">
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-dark p-4">
-        <h4 class="h4local">Nombre del local</h4>
-        <p><a href="#entradas">Entradas</a></p>
-        <p><a href="#platos-principales">Platos Principales</a></p>
-        <p><a href="#postres">Postres</a></p>
-        <p><a href="#bebidas-con-alcohol">Bebidas con Alcohol</a></p>
-        <p><a href="#bebidas-sin-alcohol">Bebidas sin Alcohol</a></p>
-        <p><a href="#postres2">Postres</a></p>
-        <p><a href="#cervezas">Cervezas</a></p>
-        <button id="modo-btn" type="button" onclick="toggleDarkMode()">
-          <i id="modo-icono" class="bi"></i> <!-- Icono de sol o luna -->
-        </button>
+
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary rounded fixed-top" aria-label="Eleventh navbar example">
+
+    <div class="container-fluid">
+
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarsExample09">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#entradas">Entradas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#platos-principales">Platos principales</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#postres">Postres</a>
+          </li>
+
+          <li class="nav-item active dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Bebidas</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#bebidas-con-alcohol">Con alcohol</a></li>
+              <li><a class="dropdown-item" href="#bebidas-sin-alcohol">Sin alcohol</a></li>
+              <li><a class="dropdown-item" href="#cervezas">Cervezas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="toggle-switch" onclick="toggleDarkMode()">
+        <div class="switch">
+          <div class="handle">
+            <span id="icono-modo" class="icono">☀</span> <!-- Icono de sol por defecto -->
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-  <nav class="navbar navbar-dark bg-dark">
-    <button class="navbar-toggler ms-auto p-2 m-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
-    aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
-
   </nav>
-  </div>
 
   <main class="contenedor">
     <section class="section-category">
@@ -228,12 +249,23 @@
         </div>
         <p class="descripcion">Cerveza oscura y robusta con sabores a café, chocolate y tostado.</p>
       </div>
-      <!-- Puedes añadir más cervezas aquí -->
     </section>
-
-    <!-- Otras secciones -->
-
   </main>
+
+
+  <div class="container">
+    <hr>
+    <footer class="footer-container  ">
+      <p class="col-md-4 mb-0 ">© 2024 Company, Inc</p>
+      <ul class="nav col-md-4 justify-content-end">
+        <li class="nav-item"><a href="#" class="nav-link px-2 ">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 ">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 ">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 ">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 ">About</a></li>
+      </ul>
+    </footer>
+  </div>
   <script>
     toggleDarkMode()
   </script>

@@ -1,14 +1,34 @@
 body {
     margin: 0%;
     padding: 0;
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Playfair Display', serif; /* Cambio a Playfair Display */
     color: #121212;
     background-color: #fff;
 }
+/* Títulos de categoría */
+.titulo-category {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px; /* Ajusta el tamaño según necesites */
+    font-weight: bold; /* Opcional para darle más énfasis */
+}
+
+/* Productos y precios */
+.producto, .precio {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px; /* Ajusta el tamaño según necesites */
+}
+
+/* Descripciones */
+.descripcion {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px; /* Ajusta el tamaño según necesites */
+}
+
+
 
 .encabezado-img {
     width: 100%;
-    height: 20vh;
+    height: 35vh;
     object-fit: cover;
 }
 
@@ -53,17 +73,158 @@ body {
 
 /* Estilos para el modo oscuro */
 .dark-mode {
-    background-color: #121212;
+    background-color: #25282b;
     color: #fff;
 }
 
-.h4local{
+.dark-mode .navbar-brand .navbar-toggler-icon {
     color: #fff;
 }
 
-p a {
+.footer-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: .8em;
+
+}
+
+.footer-container a {
+    text-decoration: none;
+    color: #121212;
+}
+
+.dark-mode footer {
     color: #fff;
     text-decoration: none;
-    font-size: 1.6em;
 }
 
+
+/*  **************************************    */
+
+.toggle-switch {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 25px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.switch {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 0.3s;
+}
+
+.handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para cuando el interruptor está activo (modo noche) */
+/* Estilos generales */
+body {
+    transition: background-color 0.5s ease;
+}
+
+/* Estilos para el interruptor */
+.toggle-switch {
+    position: relative;
+    width: 60px;
+    /* Ajusta el ancho del interruptor */
+    height: 30px;
+    /* Ajusta la altura del interruptor */
+    background-color: #ccc;
+    border-radius: 30px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.switch {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px;
+    /* Ajusta el ancho del círculo */
+    height: 20px;
+    /* Ajusta la altura del círculo */
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 0.3s;
+}
+
+.handle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.icono {
+    transition: transform 0.3s;
+}
+
+/* Estilos para el modo día */
+.light-mode .switch {
+    left: 5px;
+}
+
+.light-mode .handle .icono {
+    content: "\2600";
+    /* Icono de sol */
+}
+
+/* Estilos para el modo noche */
+.dark-mode .switch {
+    left: 35px;
+    /* Ajusta la posición del círculo para el modo noche */
+    background-color: #222121;
+}
+
+.dark-mode .handle .icono {
+    content: "\1F319";
+    /* Icono de luna */
+}
+
+.dark-mode {
+    background-color: #1a1919;
+}
+
+/* Hacer el interruptor responsive */
+@media (max-width: 768px) {
+    .toggle-switch {
+        width: 50px;
+        /* Ajusta el tamaño para dispositivos más pequeños */
+        height: 25px;
+    }
+
+    .switch {
+        width: 15px;
+        height: 15px;
+    }
+
+
+    .encabezado-img {
+        width: 100%;
+        height: 20vh;
+        object-fit: cover;
+    }
+
+
+}
