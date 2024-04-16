@@ -1,154 +1,116 @@
+/* Estilos Generales */
 body {
-    margin: 0%;
+    margin: 0;
     padding: 0;
-    font-family: 'Playfair Display', serif; /* Cambio a Playfair Display */
-    color: #121212;
-    background-color: #fff;
-}
-/* Títulos de categoría */
-.titulo-category {
     font-family: 'Playfair Display', serif;
-    font-size: 24px; /* Ajusta el tamaño según necesites */
-    font-weight: bold; /* Opcional para darle más énfasis */
+    color: #333;
+    /* Cambiado a un gris oscuro para mejorar la legibilidad */
+    background-color: #fff;
+    line-height: 1.6;
+    /* Espaciado de línea para mejorar la legibilidad */
 }
 
-/* Productos y precios */
-.producto, .precio {
-    font-family: 'Lato', sans-serif;
-    font-size: 18px; /* Ajusta el tamaño según necesites */
-}
-
-/* Descripciones */
-.descripcion {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px; /* Ajusta el tamaño según necesites */
-}
-
-
-
+/* Imagen de Encabezado */
 .encabezado-img {
     width: 100%;
     height: 35vh;
     object-fit: cover;
 }
 
+/* Contenedor Principal */
 .contenedor {
     text-align: center;
-    padding: 1em 1em;
+    padding: 2em;
+    /* Aumento del padding para más espacio */
 }
 
+/* Sección de Categoría */
+.section-category {
+    margin: 3em 0;
+    padding: 1em;
+    background-color: #f9f9f9;
+    /* Fondo sutil para diferenciar secciones */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+/* Títulos de Categoría */
+.titulo-category {
+    font-size: 2em;
+    /* Tamaño más grande para destacar */
+    margin-bottom: 1em;
+    /* Espacio antes de los productos */
+    color: #d35400;
+    /* Color que invita al apetito */
+}
+
+/* Servicio */
+.servicio {
+    border: 1px solid #eaeaea;
+    /* Borde sutil */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    margin-bottom: 1em;
+    /* Espacio entre servicios */
+    padding: 1em;
+    /* Padding interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    /* Sombra suave */
+    background-color: #fff;
+    /* Fondo blanco para resaltar */
+}
+
+/* Productos y Precios */
 .producto-precio {
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-}
-
-.section-category {
-    margin: 2em 0em;
-}
-
-.titulos-category {
-    font-family: 'Courier New', Courier, monospace;
-    margin: 5em;
-}
-
-.producto {
-    font-size: 1.2em;
-}
-
-.precio {
     font-weight: 500;
+    /* Peso de la fuente para productos y precios */
 }
 
+/* Estilos de Producto */
+.producto {
+    font-size: 1.5em;
+    /* Tamaño más grande para destacar */
+    color: #27ae60;
+    /* Color verde que representa frescura */
+}
+
+/* Estilos de Precio */
+.precio {
+    font-weight: 700;
+    /* Más peso para destacar el precio */
+    font-size: 1.2em;
+    /* Tamaño ligeramente más grande */
+}
+
+/* Descripciones de Productos */
 .descripcion {
-    margin: 0%;
-    padding: 0%;
     text-align: start;
-    font-size: small;
-    padding: .3em;
-    margin-top: -1.4em;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    /* Tamaño estándar para facilidad de lectura */
+    color: #7f8c8d;
+    /* Gris suave para las descripciones */
+    font-family: 'Open Sans', sans-serif;
+    /* Fuente neutra para descripciones */
+    margin-bottom: 2em;
+    /* Espacio después de la descripción */
 }
 
-/* Estilos para el modo oscuro */
+/* Modo Oscuro */
 .dark-mode {
     background-color: #25282b;
     color: #fff;
 }
 
-.dark-mode .navbar-brand .navbar-toggler-icon {
-    color: #fff;
-}
-
-.footer-container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: .8em;
-
-}
-
-.footer-container a {
-    text-decoration: none;
-    color: #121212;
-}
-
-.dark-mode footer {
-    color: #fff;
-    text-decoration: none;
-}
-
-
-/*  **************************************    */
-
-.toggle-switch {
-    position: relative;
-    width: 100px;
-    height: 50px;
-    background-color: #ccc;
-    border-radius: 25px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-}
-
-.switch {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 40px;
-    height: 40px;
-    background-color: #fff;
-    border-radius: 50%;
-    transition: left 0.3s;
-}
-
-.handle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 24px;
-    height: 24px;
-    background-color: #f1f1f1;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Estilo para cuando el interruptor está activo (modo noche) */
-/* Estilos generales */
-body {
-    transition: background-color 0.5s ease;
-}
-
-/* Estilos para el interruptor */
+/* Interruptor de Modo Oscuro */
 .toggle-switch {
     position: relative;
     width: 60px;
-    /* Ajusta el ancho del interruptor */
     height: 30px;
-    /* Ajusta la altura del interruptor */
     background-color: #ccc;
     border-radius: 30px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
@@ -160,9 +122,7 @@ body {
     top: 5px;
     left: 5px;
     width: 20px;
-    /* Ajusta el ancho del círculo */
     height: 20px;
-    /* Ajusta la altura del círculo */
     background-color: #fff;
     border-radius: 50%;
     transition: left 0.3s;
@@ -180,37 +140,19 @@ body {
     transition: transform 0.3s;
 }
 
-/* Estilos para el modo día */
-.light-mode .switch {
-    left: 5px;
-}
-
-.light-mode .handle .icono {
-    content: "\2600";
-    /* Icono de sol */
-}
-
-/* Estilos para el modo noche */
 .dark-mode .switch {
     left: 35px;
-    /* Ajusta la posición del círculo para el modo noche */
     background-color: #222121;
 }
 
 .dark-mode .handle .icono {
     content: "\1F319";
-    /* Icono de luna */
 }
 
-.dark-mode {
-    background-color: #1a1919;
-}
-
-/* Hacer el interruptor responsive */
+/* Responsive */
 @media (max-width: 768px) {
     .toggle-switch {
         width: 50px;
-        /* Ajusta el tamaño para dispositivos más pequeños */
         height: 25px;
     }
 
@@ -219,12 +161,22 @@ body {
         height: 15px;
     }
 
-
     .encabezado-img {
-        width: 100%;
         height: 20vh;
-        object-fit: cover;
     }
 
+    .titulo-category {
+        font-size: 1.5em;
+        /* Tamaño ajustado para pantallas pequeñas */
+    }
 
+    .producto {
+        font-size: 1.2em;
+        /* Tamaño ajustado para pantallas pequeñas */
+    }
+
+    .precio {
+        font-size: 1em;
+        /* Tamaño ajustado para pantallas pequeñas */
+    }
 }
